@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8" />
   <title>신성한 판차</title>
@@ -10,18 +11,21 @@
       --cream: #fdfcf7;
       --accent: #3b2f1d;
     }
+
     body {
       margin: 0;
       font-family: "Georgia", "Apple SD Gothic Neo", "Noto Serif KR", serif;
       background: var(--cream);
       color: #2c2c2c;
     }
+
     header {
       background: linear-gradient(to bottom, #fff8dc, #f5deb3);
       border-bottom: 5px solid var(--gold-1);
       text-align: center;
       padding: 28px 20px;
     }
+
     .header-row {
       display: flex;
       align-items: center;
@@ -29,58 +33,270 @@
       gap: 20px;
       flex-wrap: wrap;
     }
-    .seal { width: 100px; height: 100px; }
+
+    .seal {
+      width: 100px;
+      height: 100px;
+    }
+
     header img {
-      width: 160px; height: 160px;
-      border-radius: 50%; border: 5px solid var(--gold-1);
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid var(--gold-1);
       object-fit: cover;
     }
-    h1 { margin: 10px 0 2px; font-size: 2.3rem; color: var(--accent); }
-    h2 { margin: 0; font-size: 1.1rem; color: #7a6650; }
-    #motto { margin-top: 8px; font-style: italic; color: #5a4632; }
-    nav { margin-top: 18px; }
+
+    h1 {
+      margin: 10px 0 2px;
+      font-size: 2.3rem;
+      color: var(--accent);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #7a6650;
+    }
+
+    #motto {
+      margin-top: 8px;
+      font-style: italic;
+      color: #5a4632;
+    }
+
+    nav {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+    }
+
     nav a {
-      margin: 0 12px; font-weight: bold; color: #5a4632;
+      display: inline-block;
+      margin: 0;
+      font-weight: bold;
+      color: #5a4632;
       text-decoration: none;
+      white-space: nowrap;
     }
-    nav a:hover { color: var(--gold-1); }
-    main { max-width: 820px; margin: 36px auto; padding: 0 20px; line-height: 1.7; }
-    section { margin-bottom: 46px; }
+
+    nav a:hover {
+      color: var(--gold-1);
+    }
+
+    main {
+      max-width: 820px;
+      margin: 36px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+    }
+
+    section {
+      margin-bottom: 46px;
+    }
+
     section h3 {
-      font-size: 1.4rem; margin-bottom: 10px;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
       border-bottom: 2px solid var(--gold-1);
-      display: inline-block; padding-bottom: 5px; color: var(--accent);
+      display: inline-block;
+      padding-bottom: 5px;
+      color: var(--accent);
     }
+
     .blessing {
-      font-style: italic; margin: 18px 0;
-      background: #fff8dc; border-left: 5px solid var(--gold-1); padding: 14px;
+      font-style: italic;
+      margin: 18px 0;
+      background: #fff8dc;
+      border-left: 5px solid var(--gold-1);
+      padding: 14px;
     }
+
     footer {
-      background: #fff8dc; border-top: 5px solid var(--gold-1);
-      text-align: center; padding: 18px; font-size: .9rem;
+      background: #fff8dc;
+      border-top: 5px solid var(--gold-1);
+      text-align: center;
+      padding: 18px;
+      font-size: .9rem;
     }
+
+    .store-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .product-card {
+      background: #fffef7;
+      border: 2px solid #edd7a1;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 22px rgba(59, 47, 29, 0.12);
+    }
+
+    .product-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-info {
+      padding: 14px;
+    }
+
+    .product-info h4 {
+      margin: 0 0 6px;
+      color: var(--accent);
+    }
+
+    .price {
+      margin-top: 8px;
+      font-weight: bold;
+      color: var(--gold-1);
+      font-size: 1.05rem;
+    }
+
+    .game-panel {
+      background: #fff8dc;
+      border: 2px solid var(--gold-1);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 10px 22px rgba(59, 47, 29, 0.12);
+    }
+
+    .game-stats {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 14px 0;
+    }
+
+    .stat {
+      flex: 1;
+      min-width: 120px;
+      background: #fff;
+      border: 1px solid #e3cc7a;
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    .upgrade-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+      margin-right: 8px;
+      margin-top: 8px;
+      background: var(--gold-1);
+    }
+
+    .game-btn {
+      border: 4px solid var(--gold-1);
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+      padding: 0;
+      background: #fff8dc;
+      box-shadow: 0 8px 18px rgba(59, 47, 29, 0.16);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .game-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .game-btn:active {
+      animation: pancha-bounce 180ms ease-out;
+    }
+
+    @keyframes pancha-bounce {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-8px) scale(1.04);
+      }
+
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .game-button-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 12px;
+    }
+
+    .upgrade-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      justify-content: center;
+    }
+
     /* language toggle */
-    .hidden { display: none !important; }
-    .lang.ko { display: block; }
+    .hidden {
+      display: none !important;
+    }
+
+    .lang.ko {
+      display: block;
+    }
+
+    nav a.lang.ko,
+    nav a.lang.en {
+      display: inline-block;
+    }
+
     #lang-toggle {
-      position: absolute; top: 15px; right: 20px;
-      background: var(--gold-1); color: #fff; border: none;
-      padding: 6px 12px; border-radius: 6px; cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: var(--gold-1);
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
     }
   </style>
 </head>
+
 <body>
   <header>
     <button id="lang-toggle">English</button>
     <div class="header-row">
       <!-- simplified seal -->
       <svg class="seal" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="92" fill="#f7e3a4" stroke="#b38621" stroke-width="4"/>
-        <ellipse cx="100" cy="130" rx="26" ry="20" fill="#3b2f1d"/>
-        <ellipse cx="70" cy="100" rx="12" ry="16" fill="#3b2f1d"/>
-        <ellipse cx="90" cy="80" rx="12" ry="16" fill="#3b2f1d"/>
-        <ellipse cx="110" cy="80" rx="12" ry="16" fill="#3b2f1d"/>
-        <ellipse cx="130" cy="100" rx="12" ry="16" fill="#3b2f1d"/>
+        <circle cx="100" cy="100" r="92" fill="#f7e3a4" stroke="#b38621" stroke-width="4" />
+        <ellipse cx="100" cy="130" rx="26" ry="20" fill="#3b2f1d" />
+        <ellipse cx="70" cy="100" rx="12" ry="16" fill="#3b2f1d" />
+        <ellipse cx="90" cy="80" rx="12" ry="16" fill="#3b2f1d" />
+        <ellipse cx="110" cy="80" rx="12" ry="16" fill="#3b2f1d" />
+        <ellipse cx="130" cy="100" rx="12" ry="16" fill="#3b2f1d" />
       </svg>
       <img src="images/pancha.png" alt="신성한 판차">
       <div>
@@ -98,6 +314,10 @@
       <a href="#commandments" class="lang en">Commandments</a>
       <a href="#offerings" class="lang ko">봉헌</a>
       <a href="#offerings" class="lang en">Sacred Offerings</a>
+      <a href="#store" class="lang ko">상점</a>
+      <a href="#store" class="lang en">Store</a>
+      <a href="#game" class="lang ko">게임</a>
+      <a href="#game" class="lang en">Game</a>
     </nav>
   </header>
 
@@ -132,20 +352,78 @@
       <h3 class="lang ko">봉헌</h3>
       <h3 class="lang en">Sacred Offerings</h3>
       <p class="lang ko">
-        신도들은 판차의 제단에 봉헌물을 바쳐야 한다. 간식, 캣닢, 세 번 접은 담요가 허용된다.  
+        신도들은 판차의 제단에 봉헌물을 바쳐야 한다. 간식, 캣닢, 세 번 접은 담요가 허용된다.
         붉은 레이저 점을 바치는 자는 영원한 웃음을 얻으리라.
       </p>
       <p class="lang en">
-        Worshippers are called to present offerings at the altar of Pancha.  
-        Acceptable tributes include crunchy treats, catnip, or a fresh blanket folded thrice.  
+        Worshippers are called to present offerings at the altar of Pancha.
+        Acceptable tributes include crunchy treats, catnip, or a fresh blanket folded thrice.
         Those who bring forth the red laser dot shall be blessed with laughter eternal.
       </p>
+    </section>
+
+    <section id="store">
+      <h3 class="lang ko">상점</h3>
+      <h3 class="lang en">Store</h3>
+      <div class="store-grid">
+        <article class="product-card">
+          <img class="product-image" src="images/pancha.png" alt="Pancha plush">
+          <div class="product-info">
+            <h4 class="lang ko">판차 인형</h4>
+            <h4 class="lang en">Pancha Plush</h4>
+            <p class="lang ko">포근한 미니 인형. 제단의 평화를 담고 있습니다.</p>
+            <p class="lang en">A cozy little plush that brings calm to the shrine.</p>
+            <div class="price">₩24,000</div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img class="product-image" src="images/pancha.png" alt="Sacred blanket">
+          <div class="product-info">
+            <h4 class="lang ko">신성한 담요</h4>
+            <h4 class="lang en">Sacred Blanket</h4>
+            <p class="lang ko">세 번 접은 담요로 판차의 잠자리를 꾸며보세요.</p>
+            <p class="lang en">A blanket folded thrice to make Pancha’s nap nook extra divine.</p>
+            <div class="price">₩18,000</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="game">
+      <h3 class="lang ko">게임</h3>
+      <h3 class="lang en">Game</h3>
+      <div class="game-panel">
+        <p class="lang ko">판차의 축복을 눌러 포인트를 모으고, 자동 퍼프 업그레이드로 더 많은 축복을 얻으세요.</p>
+        <p class="lang en">Tap Pancha’s blessing to gather points, then buy an auto-purr upgrade for even more
+          blessings.</p>
+        <div class="game-stats">
+          <div class="stat">
+            <span class="lang ko">포인트</span>
+            <span class="lang en">Points</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat">
+            <span class="lang ko">자동 퍼프</span>
+            <span class="lang en">Auto-purr</span>
+            <strong id="autoLevel">0</strong>
+          </div>
+        </div>
+        <div class="game-button-wrap">
+          <button class="game-btn" id="blessBtn" type="button" aria-label="Bless Pancha">
+            <img src="images/pancha-face.png" alt="Pancha face" />
+          </button>
+        </div>
+        <div class="upgrade-row">
+          <button class="upgrade-btn" id="autoBtn" type="button">Buy Auto-Purr (20)</button>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
     <span class="lang ko">&copy; 2025 판차의 교단. 모든 권리 보유. <br><em>이 웹사이트는 재미를 위해 만든 패러디입니다.</em></span>
-    <span class="lang en">&copy; 2025 The Cult of Pancha. All rights reserved. <br><em>This is a parody site created for fun.</em></span>
+    <span class="lang en">&copy; 2025 The Cult of Pancha. All rights reserved. <br><em>This is a parody site created for
+        fun.</em></span>
   </footer>
 
   <script>
@@ -159,9 +437,9 @@
     ];
     const mottoEl = document.getElementById("motto");
     let m = 0;
-    function rotateMotto(){
+    function rotateMotto() {
       mottoEl.textContent = mottos[m];
-      m = (m+1) % mottos.length;
+      m = (m + 1) % mottos.length;
     }
     rotateMotto();
     setInterval(rotateMotto, 4000);
@@ -169,21 +447,56 @@
     // Language toggle
     let current = "ko";
     const toggleBtn = document.getElementById("lang-toggle");
-    function setLang(lang){
-      document.querySelectorAll(".lang").forEach(el=>{
-        if(el.classList.contains(lang)){
+    const scoreEl = document.getElementById("score");
+    const autoLevelEl = document.getElementById("autoLevel");
+    const blessBtn = document.getElementById("blessBtn");
+    const autoBtn = document.getElementById("autoBtn");
+    let score = 0;
+    let autoLevel = 0;
+    let clickPower = 1;
+
+    function updateGameUI() {
+      scoreEl.textContent = score;
+      autoLevelEl.textContent = autoLevel;
+      autoBtn.textContent = `${(current === "ko") ? "자동 퍼프 사기" : "Buy Auto-Purr"} (${20 + autoLevel * 10})`;
+    }
+
+    blessBtn.addEventListener("click", () => {
+      score += clickPower;
+      updateGameUI();
+    });
+
+    autoBtn.addEventListener("click", () => {
+      const cost = 20 + autoLevel * 10;
+      if (score >= cost) {
+        score -= cost;
+        autoLevel += 1;
+        updateGameUI();
+      }
+    });
+
+    setInterval(() => {
+      score += autoLevel;
+      updateGameUI();
+    }, 1000);
+
+    function setLang(lang) {
+      document.querySelectorAll(".lang").forEach(el => {
+        if (el.classList.contains(lang)) {
           el.classList.remove("hidden");
         } else {
           el.classList.add("hidden");
         }
       });
       current = lang;
-      toggleBtn.textContent = (lang==="ko") ? "English" : "한국어";
+      toggleBtn.textContent = (lang === "ko") ? "English" : "한국어";
+      updateGameUI();
     }
-    toggleBtn.addEventListener("click", ()=>{
-      setLang(current==="ko" ? "en" : "ko");
+    toggleBtn.addEventListener("click", () => {
+      setLang(current === "ko" ? "en" : "ko");
     });
     setLang("ko"); // default Korean
   </script>
 </body>
+
 </html>
