@@ -195,12 +195,12 @@
       setLang(language);
       try {
         localStorage.setItem("pancha-language", language);
-      } catch {}
+      } catch { }
     });
     let preferredLanguage = navigator.language;
     try {
       preferredLanguage = localStorage.getItem("pancha-language") || preferredLanguage;
-    } catch {}
+    } catch { }
     setLang(preferredLanguage.toLowerCase().split("-")[0] in translations
       ? preferredLanguage.toLowerCase().split("-")[0] : "ko");
   </script>
