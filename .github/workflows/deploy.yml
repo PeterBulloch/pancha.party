@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Deploy website
         run: |
-          ssh -o StrictHostKeyChecking=no pancha@192.168.0.22 '
+          ssh -o StrictHostKeyChecking=no pancha@192.168.0.20 '
             cd /home/pancha/pancha.party &&
             git pull origin main &&
             rsync -av --delete public/ /var/lib/nginx/html/
