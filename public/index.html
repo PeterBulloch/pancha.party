@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <title>신성한 판차</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <button id="lang-toggle" type="button" aria-label="영어로 전환">English</button>
+    <div class="header-row">
+      <!-- simplified seal -->
+      <svg class="seal" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="92" fill="#f7e3a4" stroke="#b38621" stroke-width="4" />
+        <ellipse cx="100" cy="130" rx="26" ry="20" fill="#3b2f1d" />
+        <ellipse cx="70" cy="100" rx="12" ry="16" fill="#3b2f1d" />
+        <ellipse cx="90" cy="80" rx="12" ry="16" fill="#3b2f1d" />
+        <ellipse cx="110" cy="80" rx="12" ry="16" fill="#3b2f1d" />
+        <ellipse cx="130" cy="100" rx="12" ry="16" fill="#3b2f1d" />
+      </svg>
+      <img src="images/pancha.png" alt="신성한 판차" data-i18n-alt="panchaAlt">
+      <div>
+        <h1 data-i18n="title">신성한 판차</h1>
+        <h2 data-i18n="subtitle">영원한 고양이 신</h2>
+      </div>
+    </div>
+    <div id="motto"></div>
+    <nav>
+      <a href="#blessings" data-i18n="blessings">축복</a>
+      <a href="#commandments" data-i18n="commandments">계율</a>
+      <a href="#offerings" data-i18n="offerings">봉헌</a>
+      <a href="#store" data-i18n="store">상점</a>
+      <a href="#game" data-i18n="game">게임</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="blessings">
+      <h3 data-i18n="blessings">축복</h3>
+      <p class="blessing" data-i18n="blessing">“판차의 눈빛이 당신에게 평화를 주고, 그의 고요한 울음이 영혼 속에 울려 퍼지길.”</p>
+    </section>
+
+    <section id="commandments">
+      <h3 data-i18n="commandmentsHeading">신성한 계율</h3>
+      <ol>
+        <li data-i18n="commandment1">낮잠을 존중하라. 그것은 거룩하다.</li>
+        <li data-i18n="commandment2">참치와 치킨을 봉헌하라. 그렇지 않으면 신의 노여움을 산다.</li>
+        <li data-i18n="commandment3">종이박스를 거룩히 하라. 그것은 그의 성전이다.</li>
+        <li data-i18n="commandment4">줌미의 시간을 따르라. 혼돈은 신성한 질서다.</li>
+        <li data-i18n="commandment5">귀를 긁어드려라. 그것은 그의 권리이다.</li>
+      </ol>
+    </section>
+
+    <section id="offerings">
+      <h3 data-i18n="offerings">봉헌</h3>
+      <p data-i18n="offeringsText">
+        신도들은 판차의 제단에 봉헌물을 바쳐야 한다. 간식, 캣닢, 세 번 접은 담요가 허용된다.
+        붉은 레이저 점을 바치는 자는 영원한 웃음을 얻으리라.
+      </p>
+    </section>
+
+    <section id="store">
+      <h3 data-i18n="store">상점</h3>
+      <div class="store-grid">
+        <article class="product-card">
+          <img class="product-image" src="images/pancha-t-shirt.png" alt="판차 티셔츠" data-i18n-alt="shirtAlt">
+          <div class="product-info">
+            <h4 data-i18n="shirtName">쿨 록 티셔츠</h4>
+            <p data-i18n="shirtDescription">판차의 귀여운 얼굴이 새겨진 쿨한 록 티셔츠입니다.</p>
+            <div class="price" data-price="240000">₩240,000</div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img class="product-image" src="images/pancha-hoodie.png" alt="판차 후디" data-i18n-alt="hoodieAlt">
+          <div class="product-info">
+            <h4 data-i18n="hoodieName">따뜻한 판차 후디</h4>
+            <p data-i18n="hoodieDescription">포근하고 따뜻한 후디로 판차의 잠옷 같은 편안함을 느껴보세요.</p>
+            <div class="price" data-price="450000">₩450,000</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="game">
+      <h3 data-i18n="game">게임</h3>
+      <div class="game-panel">
+        <p data-i18n="gameIntro">판차의 축복을 눌러 포인트를 모으고, 자동 퍼프 업그레이드로 더 많은 축복을 얻으세요.</p>
+        <div class="game-stats">
+          <div class="stat">
+            <span data-i18n="points">포인트</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat">
+            <span data-i18n="autoPurr">자동 퍼프</span>
+            <strong id="autoLevel">0</strong>
+          </div>
+        </div>
+        <div class="game-button-wrap">
+          <button class="game-btn" id="blessBtn" type="button" aria-label="판차 축복하기" data-i18n-aria-label="blessAction">
+            <img src="images/pancha-face.png" alt="판차의 얼굴" data-i18n-alt="faceAlt" />
+          </button>
+        </div>
+        <div class="upgrade-row">
+          <button class="upgrade-btn" id="autoBtn" type="button">자동 퍼프 사기 (20)</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span data-i18n="footerRights">&copy; 2025 판차의 교단. 모든 권리 보유.</span><br>
+    <em data-i18n="footerDisclaimer">이 웹사이트는 재미를 위해 만든 패러디입니다.</em>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script>
+    const mottoEl = document.getElementById("motto");
+    let current = "ko";
+    let mottoIndex = 0;
+    let numberFormatter = new Intl.NumberFormat("ko-KR");
+    const toggleBtn = document.getElementById("lang-toggle");
+    const scoreEl = document.getElementById("score");
+    const autoLevelEl = document.getElementById("autoLevel");
+    const blessBtn = document.getElementById("blessBtn");
+    const autoBtn = document.getElementById("autoBtn");
+    let score = 0;
+    let autoLevel = 0;
+    let clickPower = 1;
+
+    function updateMotto() {
+      mottoEl.textContent = translations[current].mottos[mottoIndex];
+    }
+
+    setInterval(() => {
+      mottoIndex = (mottoIndex + 1) % translations[current].mottos.length;
+      updateMotto();
+    }, 4000);
+
+    function updateGameUI() {
+      scoreEl.textContent = numberFormatter.format(score);
+      autoLevelEl.textContent = numberFormatter.format(autoLevel);
+      autoBtn.textContent = `${translations[current].buyAutoPurr} (${numberFormatter.format(20 + autoLevel * 10)})`;
+    }
+
+    blessBtn.addEventListener("click", () => {
+      score += clickPower;
+      updateGameUI();
+    });
+
+    autoBtn.addEventListener("click", () => {
+      const cost = 20 + autoLevel * 10;
+      if (score >= cost) {
+        score -= cost;
+        autoLevel += 1;
+        updateGameUI();
+      }
+    });
+
+    setInterval(() => {
+      score += autoLevel;
+      updateGameUI();
+    }, 1000);
+
+    function setLang(lang) {
+      const strings = translations[lang];
+      current = lang;
+      numberFormatter = new Intl.NumberFormat(lang === "ko" ? "ko-KR" : "en-US");
+      document.documentElement.lang = lang;
+      document.title = strings.title;
+      document.querySelectorAll("[data-i18n]").forEach(element => {
+        element.textContent = strings[element.dataset.i18n];
+      });
+      document.querySelectorAll("[data-i18n-alt]").forEach(element => {
+        element.alt = strings[element.dataset.i18nAlt];
+      });
+      document.querySelectorAll("[data-i18n-aria-label]").forEach(element => {
+        element.setAttribute("aria-label", strings[element.dataset.i18nAriaLabel]);
+      });
+      const currencyFormatter = new Intl.NumberFormat(lang === "ko" ? "ko-KR" : "en-US", {
+        style: "currency", currency: "KRW", maximumFractionDigits: 0
+      });
+      document.querySelectorAll("[data-price]").forEach(element => {
+        element.textContent = currencyFormatter.format(Number(element.dataset.price));
+      });
+      toggleBtn.textContent = strings.otherLanguage;
+      toggleBtn.setAttribute("aria-label", strings.switchLanguage);
+      updateMotto();
+      updateGameUI();
+    }
+    toggleBtn.addEventListener("click", () => {
+      const language = current === "ko" ? "en" : "ko";
+      setLang(language);
+      try {
+        localStorage.setItem("pancha-language", language);
+      } catch {}
+    });
+    let preferredLanguage = navigator.language;
+    try {
+      preferredLanguage = localStorage.getItem("pancha-language") || preferredLanguage;
+    } catch {}
+    setLang(preferredLanguage.toLowerCase().split("-")[0] in translations
+      ? preferredLanguage.toLowerCase().split("-")[0] : "ko");
+  </script>
+</body>
+
+</html>
